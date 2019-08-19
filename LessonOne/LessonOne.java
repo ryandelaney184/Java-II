@@ -36,11 +36,11 @@ public class LessonOne {
 
         System.out.println("=== Question One ===");
         // This will execute the questionOne Method
-        //instance.QuestionOne();
+        instance.QuestionOne();
 
         System.out.println("\n=== Question Nine ===");
         // This will execute the questionNine Method.
-        //instance.questionNine();
+        instance.questionNine();
 
         System.out.println("\n=== Question Seven ===");
         instance.questionSeven();
