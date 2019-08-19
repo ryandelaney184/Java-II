@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author ryandelaney
  * @version 1.2 ALPHA
  */
-public class LessonOne {
+public class LabOne {
 
     // The scanner is used to get the user's
     // input.
