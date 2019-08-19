@@ -1,4 +1,4 @@
-package com.rydelaney.lessonOne;
+package com.rydelaney.LabOne;
 
 import java.util.Scanner;
 
@@ -7,9 +7,9 @@ import java.util.Scanner;
  * for the Lesson One Lab.
  *
  * @author ryandelaney
- * @version 1.2 ALPHA
+ * @version 1.1 ALPHA
  */
-public class LabOne {
+public class LessonOne {
 
     // The scanner is used to get the user's
     // input.
