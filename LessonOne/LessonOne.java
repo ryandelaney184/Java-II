@@ -7,7 +7,7 @@ import java.util.Scanner;
  * for the Lesson One Lab.
  *
  * @author ryandelaney
- * @version 1.1 ALPHA
+ * @version 1.2 ALPHA
  */
 public class LessonOne {
 
@@ -18,6 +18,7 @@ public class LessonOne {
     /**
      * The main method is the entry point for the
      * LessonOne program.
+     *
      * @param args arguments taken from the
      *             Command Line (Window) or
      *             Terminal (Mac OS).
@@ -44,6 +45,12 @@ public class LessonOne {
 
         System.out.println("\n=== Question Seven ===");
         instance.questionSeven();
+
+        System.out.println("\n=== Question Two ===");
+        Payroll payroll = new Payroll();
+        payroll.inputEmployeeData();
+
+
     }
 
     //---------------------------------------
@@ -56,11 +63,11 @@ public class LessonOne {
      * the month then calculates their
      * service fee.
      */
-    private void QuestionOne(){
+    private void QuestionOne() {
 
         // Check to make sure the Scanner is created before
         // trying to use it.
-        if(userInput != null) {
+        if (userInput != null) {
 
             // Stores the base amount the bank charges
             // per month. This should not change thus
@@ -85,7 +92,7 @@ public class LessonOne {
 
             // if the amount of checks are between 20 - 39 the
             // user should get charged 8 cent per check written
-            else if (numChecks < 40){
+            else if (numChecks < 40) {
                 System.out.println("8%");
                 total = (float) (baseAmount + (numChecks * 0.08));
             }
@@ -106,7 +113,7 @@ public class LessonOne {
             System.out.println("Your service fee is : $" + total);
 
             // This runs if for some reason the scanner was not created.
-        } else{
+        } else {
             System.out.println("This is embarrassing but the scanner was not created");
         }
     }
@@ -114,17 +121,18 @@ public class LessonOne {
     //---------------------------------------
     // Question Nine Methods
     //---------------------------------------
+
     /**
      * The QuestionNine method predicts the size of a population.
      * The user enters the starting population the rate at which
      * the population will grow and how long the simulation
      * should run for.
      */
-    private void questionNine(){
+    private void questionNine() {
 
         // Check to make sure the Scanner is created before
         // trying to use it.
-        if(userInput != null){
+        if (userInput != null) {
 
             // The population stores the current population of the species
             int population;
@@ -137,7 +145,7 @@ public class LessonOne {
             // This make sure the starting population is not less the 2
             // if the population is less then 2 then keep asking them to
             // validate the starting population.
-            while(population < 2){
+            while (population < 2) {
                 System.out.println("That is not a valid starting population: ");
                 population = userInput.nextInt();
             }
@@ -151,7 +159,7 @@ public class LessonOne {
             // This checks to make sure the user can't enter a negative population
             // increase.  If the user does keep asking them to enter a valid
             // population increase.
-            while(repopulatingRatio > 1){
+            while (repopulatingRatio > 1) {
                 System.out.println("That is not a valid population increase \ntry again: ");
                 repopulatingRatio = userInput.nextInt() / 100;
             }
@@ -163,17 +171,17 @@ public class LessonOne {
             System.out.println("Enter the amount of days they have to repopulate: ");
             runningDays = userInput.nextInt();
 
-            while (runningDays < 1){
+            while (runningDays < 1) {
                 System.out.println("Not a valid amount of days \ntry again: ");
                 runningDays = userInput.nextInt();
             }
 
-            for (int currentDay = 0; currentDay <runningDays ; currentDay++) {
-                population =(int) (population + (population * repopulatingRatio));
-                System.out.println("Day " + currentDay +" population: " + population);
+            for (int currentDay = 0; currentDay < runningDays; currentDay++) {
+                population = (int) (population + (population * repopulatingRatio));
+                System.out.println("Day " + currentDay + " population: " + population);
             }
 
-        }else {
+        } else {
             System.out.println("This is embarrassing but the scanner was not created");
         }
     }
@@ -181,13 +189,14 @@ public class LessonOne {
     //---------------------------------------
     // Question Seven Methods
     //---------------------------------------
+
     /**
      * questionSeven method takes
      * in test scores and will  output
      * the grade letter associated
      * with it the number grade.
      */
-    private void questionSeven(){
+    private void questionSeven() {
 
         // Prompts the user to enter the first test grade
         // then stores the input into gradeOne.
@@ -237,26 +246,22 @@ public class LessonOne {
     /**
      * The calcAverage method takes in 5 test grades then
      * will calculate the average of the five test grades.
-     *
+     * <p>
      * NOTE: the test grades can't be negative or greater
      * then 100.
      *
-     * @param gradeOne the first test grade this grade can't
-     *                 be less then 0 or greater then 100.
-     *
-     * @param gradeTwo the second test grade this grade can't
-     *                 be less then 0 or greater then 100.
-     *
+     * @param gradeOne   the first test grade this grade can't
+     *                   be less then 0 or greater then 100.
+     * @param gradeTwo   the second test grade this grade can't
+     *                   be less then 0 or greater then 100.
      * @param gradeThree the third test grade this grade can't
      *                   be less then 0 or greater then 100.
-     *
-     * @param gradeFour the forth test grade this grade can't
-     *                  be less then 0 or greater then 100.
-     *
-     * @param gradeFive the fifth test grade this grade can't
-     *                  be less then 0 or greater then 100.
+     * @param gradeFour  the forth test grade this grade can't
+     *                   be less then 0 or greater then 100.
+     * @param gradeFive  the fifth test grade this grade can't
+     *                   be less then 0 or greater then 100.
      */
-    private float calcAverage(int gradeOne, int gradeTwo, int gradeThree, int gradeFour, int gradeFive){
+    private float calcAverage(int gradeOne, int gradeTwo, int gradeThree, int gradeFour, int gradeFive) {
         // This will first add all the grades first then divedes by
         return (gradeOne + gradeTwo + gradeThree + gradeFour + gradeFive) / 5;
     }
@@ -268,12 +273,12 @@ public class LessonOne {
      *
      * @return the grade input by the user.
      */
-    private int getGrade(){
+    private int getGrade() {
         // This will store the result that
         // will be returned.
         int result = -1;
 
-        if(userInput != null) {
+        if (userInput != null) {
             System.out.println("Enter grade: ");
             result = userInput.nextInt();
 
@@ -289,35 +294,37 @@ public class LessonOne {
 
     /**
      * This will take in a grade and will output the letter grade.
+     *
      * @param grade the test grade
      */
-    private void getLetterGrade(int grade){
+    private void getLetterGrade(int grade) {
 
         // If the grade is between 90 and 100
         // they got an A.
-        if(grade >= 90 && grade <= 100)
+        if (grade >= 90 && grade <= 100)
             System.out.println("Letter Grade: A");
 
-        // If the grade is between 80 and 89
-        // they got an B.
-        else if(grade >= 80 && grade < 90)
+            // If the grade is between 80 and 89
+            // they got an B.
+        else if (grade >= 80 && grade < 90)
             System.out.println("Letter Grade: B");
 
-        // If the grade is between 70 and 79
-        // they got a b.
-        else if(grade >= 70 && grade < 80)
+            // If the grade is between 70 and 79
+            // they got a b.
+        else if (grade >= 70 && grade < 80)
             System.out.println("Letter Grade: C");
 
-        // If the grade is between 60 and 69
-        // they got a c.
-        else if(grade >= 60 && grade < 70)
+            // If the grade is between 60 and 69
+            // they got a c.
+        else if (grade >= 60 && grade < 70)
             System.out.println("Letter Grade: D");
 
-        // If the grade is less then 60 they got
-        // an f. I can do this because the code
-        // above checks to make sure the grade
-        // range is between 0 and 100.
+            // If the grade is less then 60 they got
+            // an f. I can do this because the code
+            // above checks to make sure the grade
+            // range is between 0 and 100.
         else
             System.out.println("Letter Grade F: ");
     }
+
 }
