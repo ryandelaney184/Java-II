@@ -1,4 +1,4 @@
-package com.rydelaney.lessonOne;
+package com.rydelaney.LabOne;
 
 import java.util.Scanner;
 /**
