@@ -7,7 +7,7 @@ import java.util.Scanner;
  * for the Lesson One Lab.
  *
  * @author ryandelaney
- * @version 1.0 ALPHA
+ * @version 1.1 ALPHA
  */
 public class LessonOne {
 
@@ -78,28 +78,27 @@ public class LessonOne {
             float total;
 
             // If the amount of checks written is less then 20 the user
-            // should get charged 10% per check written + base amount.
+            // should get charged 10 cent per check written + base amount.
             if (numChecks < 20) {
-                System.out.println("10%");
                 total = (float) (baseAmount + (numChecks * 0.10));
             }
 
             // if the amount of checks are between 20 - 39 the
-            // user should get charged 8%.
+            // user should get charged 8 cent per check written
             else if (numChecks < 40){
                 System.out.println("8%");
                 total = (float) (baseAmount + (numChecks * 0.08));
             }
 
             // if the amount of checks are between 20 - 39 the
-            // user should get charged 6%.
+            // user should get charged 6 cent per check written
             else if (numChecks < 60) {
                 System.out.println("6%");
                 total = (float) (baseAmount + (numChecks * 0.06));
             }
 
             // If the amount of check written are greater then 60 the user
-            // get's charged 4% per check.
+            // get's charged 4 cent per check written.
             else
                 total = (float) (baseAmount + (numChecks * 0.04));
 
